@@ -3,7 +3,7 @@ import email
 import re
 from password import password_extraction
 
-EMAIL = '2023UMA0239@iitjammu.ac.in'
+EMAIL = 'EMAILID@HERE.COM'
 PASSWORD = password_extraction("mail_password")
 
 def fetch_otp():

@@ -10,7 +10,7 @@ from otp_extraction import fetch_otp
 from password import password_extraction
 
 
-driverPath = "/Users/shamdhage/Desktop/new-brave-chromedriver-mac-x64/chromedriver" # Path to ChromeDriver
+driverPath = "Path to chrome driver" # Path to ChromeDriver
 service = Service(driverPath)
 options = webdriver.ChromeOptions()
 options.add_argument("--headless")
@@ -24,7 +24,7 @@ print("Opened saral")
 driver.find_element("xpath",'//*[@id="submit"]').click()
 driver.find_element("xpath",'//*[@id="ssubmit"]').click()
 
-driver.find_element("xpath",'//*[@id="txt_luserid"]').send_keys("2023UMA0239")
+driver.find_element("xpath",'//*[@id="txt_luserid"]').send_keys("COLLEGE_ROLLNO")
 driver.find_element("xpath",'//*[@id="txt_lpwd"]').send_keys(password_extraction("eg_password"))
 print("Entered username and password")
 
@@ -66,12 +66,12 @@ time.sleep(0.9)
 year = driver.find_element("xpath",'//*[@id="year"]')
 dropdown = Select(year)
 dropdown.select_by_visible_text("2024-25")
-print("Selected year 2024-25")
+print("Selected year 2024-25") #Change accordingly
 
 sem = driver.find_element("xpath",'//*[@id="sem"]')
 dropdown = Select(sem)
 dropdown.select_by_visible_text("02")
-print("Selected sem 02")
+print("Selected sem 02") #Change as per needs
 
 proceed = driver.find_element("xpath",'//*[@id="submit"]')
 proceed.click()
